@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Контактна інформація Валерія Студента та форма зворотного зв'язку.">
+    <meta name="author" content="Валерій Студент">
+    <title>Контакти — Портфоліо Валерія Студента</title>
+</head>
+<body>
+    <header>
+        <h1>Контакти</h1>
+        <nav aria-label="Головна навігація">
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="about.html">Про мене</a></li>
+                <li>Контакти</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Контактна інформація</h2>
+            <address>
+                <p>Email: <a href="mailto:student@example.com">student@example.com</a></p>
+                <p>Телефон: <a href="tel:+380501234567">+38 (050) 123-45-67</a></p>
+                <p>Місто: Київ, Україна</p>
+                <p>GitHub: <a href="https://github.com/example-student">github.com/example-student</a></p>
+            </address>
+        </section>
+
+        <section>
+            <h2>Форма зворотного зв'язку</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Контактна інформація</legend>
+
+                    <p>
+                        <label for="name">Ім'я:</label><br>
+                        <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" required>
+                    </p>
+
+                    <p>
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Повідомлення</legend>
+
+                    <p>
+                        <label for="subject">Тема звернення:</label><br>
+                        <select id="subject" name="subject" required>
+                            <option value="">-- Оберіть тему --</option>
+                            <option value="general">Загальне питання</option>
+                            <option value="cooperation">Співпраця</option>
+                            <option value="feedback">Відгук</option>
+                        </select>
+                    </p>
+
+                    <p>Тип звернення:</p>
+                    <p>
+                        <label>
+                            <input type="radio" name="type" value="question" required>
+                            Питання
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="radio" name="type" value="suggestion">
+                            Пропозиція
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="radio" name="type" value="complaint">
+                            Скарга
+                        </label>
+                    </p>
+
+                    <p>
+                        <label for="message">Повідомлення:</label><br>
+                        <textarea id="message" name="message" rows="5" placeholder="Ваше повідомлення" required></textarea>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <label>
+                        <input type="checkbox" name="consent" required>
+                        Я погоджуюсь на обробку персональних даних
+                    </label>
+                </p>
+
+                <p>
+                    <button type="submit">Надіслати</button>
+                    <button type="reset">Очистити</button>
+                </p>
+            </form>
+        </section>
+
+        <aside>
+            <h2>Коли відповідатиму?</h2>
+            <p>Зазвичай я перевіряю повідомлення після занять або під час самостійної роботи над проєктами.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Валерій Студент. Всі права захищені.</p>
+        <p><a href="about.html">Дізнатися більше про мене</a></p>
+    </footer>
+</body>
+</html>
