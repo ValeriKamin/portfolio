@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="240" viewBox="0 0 320 240" role="img" aria-labelledby="title desc">
+  <title id="title">Робоче місце студента</title>
+  <desc id="desc">Ноутбук, книга та чашка на робочому столі</desc>
+  <rect width="320" height="240" fill="#fafafa"/>
+  <rect x="42" y="155" width="236" height="20" fill="#dddddd" stroke="#333" stroke-width="3"/>
+  <rect x="95" y="70" width="130" height="80" rx="8" fill="#ffffff" stroke="#333" stroke-width="3"/>
+  <text x="122" y="115" font-size="17" font-family="Arial">portfolio</text>
+  <rect x="80" y="150" width="160" height="12" fill="#eeeeee" stroke="#333" stroke-width="3"/>
+  <rect x="40" y="115" width="42" height="30" fill="#ffffff" stroke="#333" stroke-width="3"/>
+  <path d="M82 123 h15 a12 12 0 0 1 0 24 h-15" fill="none" stroke="#333" stroke-width="3"/>
+  <rect x="245" y="105" width="45" height="45" fill="#ffffff" stroke="#333" stroke-width="3"/>
+  <line x1="250" y1="118" x2="285" y2="118" stroke="#333" stroke-width="2"/>
+  <line x1="250" y1="130" x2="285" y2="130" stroke="#333" stroke-width="2"/>
+  <line x1="250" y1="142" x2="275" y2="142" stroke="#333" stroke-width="2"/>
+</svg>
