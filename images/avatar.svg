@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="240" viewBox="0 0 320 240" role="img" aria-labelledby="title desc">
+  <title id="title">Аватар фронтенд-розробника</title>
+  <desc id="desc">Ілюстрація людини перед екраном з HTML-кодом</desc>
+  <rect width="320" height="240" fill="#f5f5f5"/>
+  <circle cx="160" cy="80" r="42" fill="#d9d9d9" stroke="#333" stroke-width="3"/>
+  <rect x="93" y="125" width="134" height="75" rx="18" fill="#e8e8e8" stroke="#333" stroke-width="3"/>
+  <rect x="40" y="30" width="90" height="55" rx="6" fill="#ffffff" stroke="#333" stroke-width="3"/>
+  <text x="55" y="64" font-size="18" font-family="Arial">&lt;HTML&gt;</text>
+  <rect x="190" y="28" width="85" height="60" rx="6" fill="#ffffff" stroke="#333" stroke-width="3"/>
+  <text x="206" y="62" font-size="16" font-family="Arial">Git</text>
+  <line x1="110" y1="204" x2="210" y2="204" stroke="#333" stroke-width="4"/>
+</svg>
