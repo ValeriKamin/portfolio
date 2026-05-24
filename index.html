@@ -5,71 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Головна сторінка.">
     <meta name="author" content="Валерій">
-    <title>Головна сторінка </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Головна сторінка</title>
 </head>
 <body>
-    <header>
-        <h1>Валерій  — майбутній Frontend Developer</h1>
-        <nav aria-label="Головна навігація">
-            <ul>
-                <li>Головна</li>
-                <li><a href="about.html">Про мене</a></li>
-                <li><a href="contacts.html">Контакти</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html" aria-label="На головну сторінку">VS</a>
+            <nav class="main-nav" aria-label="Головна навігація">
+                <ul class="nav-menu">
+                    <li><span class="nav-link current">Головна</span></li>
+                    <li><a class="nav-link" href="about.html">Про мене</a></li>
+                    <li><a class="nav-link" href="contacts.html">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section>
-            <h2>Вітаю на моєму портфоліо</h2>
-            <p>
-                Мене звати <strong>Валерій</strong>. Я навчаюся фронтенд-розробці та поступово
-                опановую HTML, структуру вебсторінок, роботу з Git і базові принципи створення сайтів.
-            </p>
-            <p>
-                Це портфоліо створене в межах лабораторної роботи з предмету <em>Front end (25-26)</em>.
-                Сайт написаний лише за допомогою HTML, без CSS та JavaScript.
-            </p>
-            <blockquote>
-                <p>«Кожна велика навичка починається з маленького практичного кроку».</p>
-            </blockquote>
+        <section id="hero" class="hero-section section-large">
+            <div class="container hero-grid">
+                <article class="hero-content">
+                    <p class="eyebrow">Front end · Лабораторна робота 2</p>
+                    <h1>Валерій — майбутній Frontend Developer</h1>
+                    <p class="lead">
+                        Мене звати <strong>Валерій</strong>. Я навчаюся фронтенд-розробці та поступово
+                        опановую HTML, структуру вебсторінок, роботу з Git і базові принципи створення сайтів.
+                    <p>
+                        Це портфоліо створене в межах лабораторної роботи з предмету <em>Front end </em>.
+                        У другій лабораторній сайт отримав повноцінне оформлення за допомогою CSS.
+                    </p>
+                    <div class="hero-actions" aria-label="Основні дії">
+                        <a class="button primary-button" href="about.html">Дізнатися більше</a>
+                        <a class="button secondary-button" href="contacts.html">Зв'язатися</a>
+                    </div>
+                </article>
+
+                <figure class="profile-card">
+                    <span class="status-badge">HTML + CSS</span>
+                    <img src="images/avatar.svg" alt="Аватар майбутнього фронтенд-розробника" width="320" height="240">
+                    <figcaption>Символічний аватар для мого навчального портфоліо.</figcaption>
+                </figure>
+            </div>
         </section>
 
-        <section>
+        <section class="container content-section">
             <h2>Мої цілі у фронтенді</h2>
-            <ol>
-                <li>Навчитися створювати правильну структуру HTML-документів.</li>
-                <li>Розуміти семантичні теги та використовувати їх за призначенням.</li>
-                <li>Працювати з Git та GitHub для збереження історії проєкту.</li>
-                <li>Поступово перейти до CSS, JavaScript і React.</li>
+            <ol class="goal-list card-grid">
+                <li class="info-card">Навчитися створювати правильну структуру HTML-документів.</li>
+                <li class="info-card">Розуміти семантичні теги та використовувати їх за призначенням.</li>
+                <li class="info-card">Працювати з Git та GitHub для збереження історії проєкту.</li>
+                <li class="info-card">Поступово перейти до CSS, JavaScript і React.</li>
             </ol>
         </section>
 
-        <section>
-            <h2>Мій навчальний профіль</h2>
-            <article>
-                <h3>Початок шляху</h3>
+        <section class="container content-section split-section">
+            <article class="text-card">
+                <h2>Початок шляху</h2>
                 <p>
                     Я вивчаю веброзробку з основ: спочатку HTML, далі CSS, JavaScript та сучасні
                     інструменти фронтенду. Мені цікаво створювати зручні, логічні та доступні сторінки.
                 </p>
-                <figure>
-                    <img src="images/avatar.svg" alt="Аватар майбутнього фронтенд-розробника" width="320" height="240">
-                    <figcaption>Символічний аватар для мого навчального портфоліо.</figcaption>
-                </figure>
+                <blockquote>
+                    <p>Кожна велика навичка починається з маленького практичного кроку.</p>
+                </blockquote>
             </article>
-        </section>
 
-        <aside>
-            <h2>Коротко про сайт</h2>
-            <p>У портфоліо є три сторінки: головна, інформація про мене та контакти з формою зворотного зв'язку.</p>
-        </aside>
+            <aside class="aside-card">
+                <h2>Коротко про сайт</h2>
+                <p>У портфоліо є три сторінки: головна, інформація про мене та контакти з формою зворотного зв'язку.</p>
+            </aside>
+        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Валерій Мурзін. Всі права захищені.</p>
-        <p>Бажаєте звязятися зі мною </p>
-        <p><a href="contacts.html">Контакти</a></p>
+     <a class="back-to-top" href="#top" aria-label="Повернутися нагору">↑</a>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 Валерій Мурзін. Всі права захищені.</p>
+            <p>Бажаєте звязятися зі мною </p>
+            <p><a href="contacts.html">Зв'язатися зі мною</a></p>
+        </div>
     </footer>
 </body>
 </html>

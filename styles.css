@@ -1,0 +1,623 @@
+/* ===== Загальні стилі ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #172033;
+    background: hsl(220, 40%, 98%);
+    padding-top: 5.25rem;
+}
+
+img,
+audio {
+    max-width: 100%;
+}
+
+a:link {
+    color: #3157d5;
+}
+
+a:visited {
+    color: #6b46c1;
+}
+
+a:hover {
+    color: rgb(34, 78, 197);
+}
+
+a:active {
+    color: hsl(12, 92%, 48%);
+}
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 0.1875rem solid rgba(49, 87, 213, 0.28);
+    outline-offset: 0.1875rem;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    max-width: 52rem;
+    margin-bottom: 1.25rem;
+    font-size: clamp(2.2rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.08rem;
+}
+
+h2 {
+    position: relative;
+    margin-bottom: 1.5rem;
+    font-size: clamp(1.6rem, 3vw, 2.3rem);
+    line-height: 1.2;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 0.25rem;
+    margin-top: 0.65rem;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #3157d5, #7c3aed);
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+.container {
+    width: min(70rem, calc(100% - 2rem));
+    margin-inline: auto;
+}
+
+.section-large {
+    padding: 5.5rem 0;
+}
+
+.content-section {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.narrow-text {
+    max-width: 44rem;
+}
+
+.lead {
+    font-size: 1.18rem;
+    color: #42526b;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.35rem 0.75rem;
+    border: 0.0625rem solid rgba(49, 87, 213, 0.18);
+    border-radius: 999px;
+    color: #3157d5;
+    background: rgb(235, 240, 255);
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08rem;
+}
+
+/* ===== Хедер та навігація ===== */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    background: rgba(255, 255, 255, 0.92);
+    border-bottom: 0.0625rem solid rgba(23, 32, 51, 0.08);
+    backdrop-filter: blur(1rem);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 5.25rem;
+    gap: 1.5rem;
+}
+
+.logo {
+    display: inline-grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1rem;
+    color: #ffffff;
+    background: #172033;
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: 0 0.75rem 1.8rem rgba(23, 32, 51, 0.18);
+}
+
+.logo:visited,
+.logo:hover,
+.logo:active {
+    color: #ffffff;
+}
+
+.nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu > li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 0.65rem 0.95rem;
+    border-radius: 999px;
+    color: #24314a;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-link:link,
+.nav-link:visited {
+    color: #24314a;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #ffffff;
+    background: #3157d5;
+}
+
+.nav-link:active {
+    background: #173ea8;
+}
+
+.current {
+    color: #ffffff;
+    background: #172033;
+}
+
+/* ===== Головна секція ===== */
+.hero-section,
+.page-hero {
+    background:
+        radial-gradient(circle at top left, rgba(124, 58, 237, 0.18), transparent 32rem),
+        linear-gradient(135deg, #ffffff 0%, #eef3ff 100%);
+    overflow: hidden;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(17rem, 0.85fr);
+    align-items: center;
+    gap: 3rem;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.button,
+button {
+    display: inline-block;
+    padding: 0.85rem 1.2rem;
+    border: 0.0625rem solid transparent;
+    border-radius: 999px;
+    font: inherit;
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.primary-button,
+button[type="submit"] {
+    color: #ffffff;
+    background: #3157d5;
+}
+
+.primary-button:visited,
+.primary-button:hover,
+button[type="submit"]:hover {
+    color: #ffffff;
+    background: #2447b8;
+    transform: translateY(-0.125rem);
+}
+
+.secondary-button,
+.button-muted,
+button[type="reset"] {
+    color: #172033;
+    background: #ffffff;
+    border-color: rgba(23, 32, 51, 0.16);
+}
+
+.secondary-button:visited,
+.secondary-button:hover,
+button[type="reset"]:hover {
+    color: #172033;
+    background: #eef3ff;
+}
+
+.profile-card,
+.info-card,
+.text-card,
+.aside-card,
+.media-card,
+.contact-card,
+.contact-form {
+    border: 0.0625rem solid rgba(23, 32, 51, 0.1);
+    border-radius: 1.75rem;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 1rem 3rem rgba(23, 32, 51, 0.08);
+}
+
+.profile-card {
+    position: relative;
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.profile-card::before {
+    content: "";
+    position: absolute;
+    inset: auto -3rem -4rem auto;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    background: hsl(258, 88%, 68%);
+    opacity: 0.18;
+}
+
+.status-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+    padding: 0.4rem 0.75rem;
+    border-radius: 999px;
+    color: #ffffff;
+    background: #172033;
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+.info-card {
+    padding: 1.4rem;
+}
+
+.split-section,
+.contact-layout,
+.media-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(17rem, 0.45fr);
+    gap: 1.5rem;
+}
+
+.text-card,
+.aside-card,
+.media-card,
+.contact-card,
+.contact-form {
+    padding: 1.5rem;
+}
+
+.aside-card {
+    align-self: start;
+    background: #172033;
+    color: #ffffff;
+}
+
+.aside-card h2::after {
+    background: #ffffff;
+}
+
+.accent-card {
+    background: linear-gradient(135deg, #3157d5, #7c3aed);
+}
+
+blockquote {
+    position: relative;
+    margin: 2rem 0 0;
+    padding: 1.2rem 1.4rem 1.2rem 3rem;
+    border-left: 0.25rem solid #3157d5;
+    border-radius: 1rem;
+    background: #eef3ff;
+}
+
+blockquote::before {
+    content: "“";
+    position: absolute;
+    top: 0.35rem;
+    left: 1rem;
+    color: #3157d5;
+    font-size: 3rem;
+    line-height: 1;
+}
+
+/* ===== Списки та мультимедіа ===== */
+.check-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.check-list li {
+    position: relative;
+    padding-left: 1.9rem;
+    margin-bottom: 0.65rem;
+}
+
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #3157d5;
+    font-weight: 800;
+}
+
+.scroll-box {
+    max-height: 23rem;
+    overflow-y: auto;
+}
+
+.media-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.image-card {
+    overflow: hidden;
+}
+
+.image-card img {
+    display: block;
+    width: 100%;
+    border-radius: 1.2rem;
+}
+
+.term-list dt {
+    font-weight: 800;
+    color: #172033;
+}
+
+.term-list dd {
+    margin: 0 0 1rem;
+    color: #53627a;
+}
+
+/* ===== Таблиця ===== */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 1.25rem;
+    box-shadow: 0 1rem 3rem rgba(23, 32, 51, 0.08);
+}
+
+.skills-table {
+    width: 100%;
+    min-width: 42rem;
+    border-collapse: collapse;
+    background: #ffffff;
+}
+
+.skills-table caption {
+    padding: 1rem;
+    font-weight: 800;
+    text-align: left;
+    background: #eef3ff;
+}
+
+.skills-table th,
+.skills-table td {
+    padding: 1rem;
+    border: 0.0625rem solid rgba(23, 32, 51, 0.12);
+    text-align: left;
+}
+
+.skills-table th {
+    color: #ffffff;
+    background: #172033;
+    font-weight: 800;
+}
+
+.skills-table tbody tr:nth-child(even) {
+    background: hsl(223, 100%, 97%);
+}
+
+.skills-table tbody tr:hover {
+    background: rgb(235, 240, 255);
+}
+
+/* ===== Форма ===== */
+.contact-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(17rem, 0.5fr);
+}
+
+address {
+    font-style: normal;
+}
+
+.contact-form {
+    max-width: 52rem;
+}
+
+fieldset {
+    margin: 0 0 1.5rem;
+    padding: 1.25rem;
+    border: 0.0625rem solid rgba(23, 32, 51, 0.14);
+    border-radius: 1.25rem;
+}
+
+legend,
+.form-label,
+label {
+    font-weight: 700;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    margin-top: 0.4rem;
+    padding: 0.85rem 1rem;
+    border: 0.0625rem solid rgba(23, 32, 51, 0.2);
+    border-radius: 0.9rem;
+    color: #172033;
+    background: #ffffff;
+    font: inherit;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #3157d5;
+    box-shadow: 0 0 0 0.25rem rgba(49, 87, 213, 0.12);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    accent-color: #3157d5;
+}
+
+.choice-label,
+.consent-label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+/* ===== Футер ===== */
+.site-footer {
+    margin-top: 5rem;
+    padding: 2rem 0;
+    color: #ffffff;
+    background: #111827;
+}
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.site-footer p {
+    margin-bottom: 0;
+}
+
+.site-footer a:link,
+.site-footer a:visited {
+    color: #dbeafe;
+}
+
+.back-to-top {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    z-index: 15;
+    display: inline-grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    color: #ffffff;
+    background: #3157d5;
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: 0 1rem 2rem rgba(49, 87, 213, 0.28);
+}
+
+.back-to-top:visited,
+.back-to-top:hover,
+.back-to-top:active {
+    color: #ffffff;
+}
+
+.back-to-top:hover {
+    background: #2447b8;
+}
+
+/* ===== Адаптивність ===== */
+@media (max-width: 56rem) {
+    body {
+        padding-top: 7.5rem;
+    }
+
+    .header-inner,
+    .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .hero-grid,
+    .split-section,
+    .contact-layout,
+    .media-grid,
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-large {
+        padding: 3.5rem 0;
+    }
+}

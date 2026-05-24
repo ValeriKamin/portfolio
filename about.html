@@ -5,87 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Сторінка про освіту.">
     <meta name="author" content="Валерій">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <title>Про мене</title>
 </head>
 <body>
-    <header>
-        <h1>Про мене</h1>
-        <nav aria-label="Головна навігація">
-            <ul>
-                <li><a href="index.html">Головна</a></li>
-                <li>Про мене</li>
-                <li><a href="contacts.html">Контакти</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html" aria-label="На головну сторінку">VS</a>
+            <nav class="main-nav" aria-label="Головна навігація">
+                <ul class="nav-menu">
+                    <li><a class="nav-link" href="index.html">Головна</a></li>
+                    <li><span class="nav-link current">Про мене</span></li>
+                    <li><a class="nav-link" href="contacts.html">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
 
-        <section>
+        <section class="page-hero section-large">
+            <div class="container">
+                <p class="eyebrow">Освіта · навички · інтереси</p>
+                <h1>Про мене</h1>
+                <p class="lead narrow-text">
+                    Я цікавлюся вебінтерфейсами, логікою побудови сторінок, UX-дизайн та майбутня робота
+                з JavaScript. Також мені подобається розробляти сайт.та систему контролю версій Git.
+                </p>
+            </div>
+        </section>
+
+        <section class="container content-section split-section">
+            <article class="text-card scroll-box">
+                    <h2>Освіта</h2>
+                    <p>
+                        Я навчаюся створювати правильну структуру сайту, працювати з формами, таблицями,
+                        мультимедіа та поступово переходжу до оформлення сторінок за допомогою CSS.
+                    </p>
+                    <h3>Навчальні пріоритети</h3>
+                    <ul class="check-list">
+                        <li>Семантична HTML-розмітка.</li>
+                        <li>Робота з формами та таблицями.</li>
+                        <li>Організація файлів у проєкті.</li>
+                        <li>Командна робота через GitHub.</li>
+                    </ul>
+            </article>
+
+            <aside class="aside-card accent-card">
+                    <h2>Цікавий факт</h2>
+                    <p>
+                        Git дозволяє повернутися до попередніх версій проєкту, тому не страшно експериментувати
+                        з кодом і поступово покращувати сайт.
+                    </p>
+            </aside>
+        </section>
+
+        <section class="container content-section">
             <h2>Інтереси</h2>
-            <p>
-                Я цікавлюся вебінтерфейсами, логікою побудови сторінок, UX-дизайн та майбутня робота
-                з JavaScript. Також мені подобається розробляти сайт.
+            <p class="narrow-text">
+                Мені цікаві вебінтерфейси, логіка побудови сторінок, UX-дизайн та майбутня робота
+                з JavaScript-фреймворками. Також я люблю розбиратися, як маленькі HTML-елементи
+                складаються у повноцінний сайт.
             </p>
         </section>
 
-        <section>
+         <section class="container content-section">
             <h2>Мої технічні навички</h2>
-            <table>
-                <caption>Мої технічні навички</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Технологія</th>
-                        <th scope="col">Рівень</th>
-                        <th scope="col">Досвід</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>HTML</td>
-                        <td>Початківець</td>
-                        <td>2 роки</td>
-                    </tr>
-                    <tr>
-                        <td>Git</td>
-                        <td>Початківець</td>
-                        <td>декілька місяців</td>
-                    </tr>
-                    <tr>
-                        <td>GitHub</td>
-                        <td>Початківець</td>
-                        <td>2 роки</td>
-                    </tr>
-                    <tr>
-                        <td>CSS</td>
-                        <td>Початківець</td>
-                        <td>2 роки</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-wrapper">
+                <table class="skills-table">
+                    <caption>Мої технічні навички</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Технологія</th>
+                            <th scope="col">Рівень</th>
+                            <th scope="col">Досвід</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HTML</td>
+                            <td>Початківець</td>
+                            <td>2 роки</td>
+                        </tr>
+                        <tr>
+                            <td>Git</td>
+                            <td>Початківець</td>
+                            <td>декілька місяців</td>
+                        </tr>
+                        <tr>
+                            <td>GitHub</td>
+                            <td>Початківець</td>
+                            <td>2 роки</td>
+                        </tr>
+                        <tr>
+                            <td>CSS</td>
+                            <td>Початкове ознайомлення</td>
+                            <td>2 роки</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
-        <section>
-            <h2>Терміни, які я вже використовую</h2>
-            <dl>
-                <dt>HTML</dt>
-                <dd>Мова розмітки для створення структури вебсторінки.</dd>
-                <dt>Git</dt>
-                <dd>Система контролю версій, яка допомагає зберігати історію змін.</dd>
-                <dt>Commit</dt>
-                <dd>Зафіксований набір змін у Git-репозиторії.</dd>
-                <dt>Repository</dt>
-                <dd>Сховище проєкту з файлами та історією змін.</dd>
-            </dl>
-        </section>
         
-         <section>
-            <h2>Мультимедіа</h2>
-            <figure>
+        <section class="container content-section media-grid">
+            <article class="media-card">
+                <h2>Терміни, які я вже використовую</h2>
+                <dl class="term-list">
+                    <dt>HTML</dt>
+                    <dd>Мова розмітки для створення структури вебсторінки.</dd>
+                    <dt>Git</dt>
+                    <dd>Система контролю версій, яка допомагає зберігати історію змін.</dd>
+                    <dt>Commit</dt>
+                    <dd>Зафіксований набір змін у Git-репозиторії.</dd>
+                </dl>
+            </article>
+
+            <figure class="media-card image-card">
                 <img src="images/workspace.svg" alt="Робоче місце студента з ноутбуком" width="320" height="240">
                 <figcaption>Моє умовне робоче місце для навчання веброзробці.</figcaption>
             </figure>
-            <figure>
+
+            <figure class="media-card audio-card">
                 <audio controls>
                     <source src="audio/intro.wav" type="audio/wav">
                     Ваш браузер не підтримує аудіо.
@@ -93,20 +137,16 @@
                 <figcaption>Короткий аудіофрагмент як приклад мультимедіа на HTML-сторінці.</figcaption>
             </figure>
         </section>
-
-        <aside>
-            <h2>Цікавий факт</h2>
-            <p>
-                Git дозволяє повернутися до попередніх версій проєкту, тому не страшно експериментувати
-                з кодом і поступово покращувати сайт.
-            </p>
-        </aside>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Валерій Мурзін. Всі права захищені.</p>
-        <p> Більше інформаці можна передивитись тут </p>
-        <p><a href="index.html">Головна Сторінка</a></p>
+    <a class="back-to-top" href="#top" aria-label="Повернутися нагору">↑</a>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 Валерій Мурзін. Всі права захищені.</p>
+            <p> Більше інформаці можна передивитись тут </p>
+            <p><a href="index.html">Головна Сторінка</a></p>
+        </div>
     </footer>
 </body>
 </html>
